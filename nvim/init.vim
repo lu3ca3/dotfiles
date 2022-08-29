@@ -2,10 +2,11 @@ set hidden
 set noswapfile
 set backspace=indent,eol,start
 set gdefault
-set number
+set relativenumber
 
 set ignorecase
 set smartcase
+set scrolloff=7
 
 set incsearch
 set nohlsearch
@@ -25,6 +26,7 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap U <C-R>
 nnoremap s /
+nnoremap / <Nop>
 nnoremap S ?
 nnoremap R :%s/
 
@@ -51,9 +53,7 @@ call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
 
-nnoremap <Leader>ff <cmd>Telescope find_files<CR>
-nnoremap <Leader>fg <cmd>Telescope live_grep<CR>
-nnoremap <Leader>fb <cmd>Telescope buffers<CR>
-nnoremap <Leader>fh <cmd>Telescope help_tags<CR>
+nnoremap <Leader>f <cmd>Telescope find_files<CR>
+nnoremap <Leader><Leader> <cmd>Telescope buffers<CR>
 
 syntax on
